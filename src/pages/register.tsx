@@ -23,8 +23,7 @@ const RegisterParkingPage: NextPage = () => {
     mode: "onBlur",
   });
 
-  const onSubmit = (data: any) => {
-    console.log("on submit", data);
+  const onSubmit = (data: CreateParkingSpace) => {
     mutate(data);
     reset();
   };

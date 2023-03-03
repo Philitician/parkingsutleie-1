@@ -1,12 +1,6 @@
 import { NextPage } from "next";
-import { useEffect, useMemo, useState } from "react";
-import getDistance from "geolib/es/getDistance";
+import { useEffect, useState } from "react";
 import { api } from "~/utils/api";
-
-type Point = {
-  latitude: number;
-  longitude: number;
-};
 
 // Gallery of parking spaces, each parking space is a clickable, styled Card and leads to a page with more information about the parking space
 const FindParkingSpacesPage: NextPage = () => {

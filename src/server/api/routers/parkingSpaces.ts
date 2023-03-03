@@ -30,7 +30,10 @@ export const parkingSpacesRouter = createTRPCRouter({
 
         return {
           ...parkingSpace,
-          distance: distance >= 1000 ? distance / 1000 + "km" : distance + "m",
+          distance:
+            distance >= 1000
+              ? `${(distance / 1000).toString()} km`
+              : `${distance.toString()} m`,
         };
       });
       return parkingSpacesWithDistance;
